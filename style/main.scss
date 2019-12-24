@@ -1,0 +1,38 @@
+@import "./fonts";
+@import "./color";
+
+$border: 0.112rem solid $l_gray;
+
+html {
+  font-size: 18px;
+  font-family: "PT Sans";
+  color: $black;
+}
+body {
+  margin: 1.334rem 2.667rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border;
+  .logo {
+    display: inline;
+  }
+  ul {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    li {
+      display: inline;
+    }
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  &:hover {
+    color: $main;
+  }
+}

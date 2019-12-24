@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("./fonts/PTS55F.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("./fonts/PTS75F.ttf");
+  font-weight: bold;
+}
+
+html {
+  font-size: 18px;
+  font-family: "PT Sans";
+  color: #293241;
+}
+
+body {
+  margin: 1.334rem 2.667rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.112rem solid #d4d4d4;
+}
+
+nav .logo {
+  display: inline;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+a {
+  color: #293241;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ee6c4d;
+}
+/*# sourceMappingURL=main.css.map */
