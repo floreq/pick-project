@@ -32,8 +32,8 @@ nav {
           align-items: center;
   margin-left: -2.667rem;
   margin-right: -2.667rem;
-  padding: 1.334rem 2.667rem;
-  border-bottom: 0.112rem solid #d4d4d4;
+  padding: 1.3335rem 2.667rem;
+  border-bottom: 0.092rem solid #d4d4d4;
 }
 
 nav .logo {
@@ -55,15 +55,35 @@ nav .logo span {
 }
 
 nav ul {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  display: inline;
   margin-left: 1.3335rem;
+}
+
+nav ul .hero {
+  padding: 0.50019rem 1.00038rem;
+  border: 0.092rem solid #d4d4d4;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+nav ul .hero img {
+  margin-right: 1.00038rem;
+  width: 1.3rem;
 }
 
 a {
@@ -76,14 +96,14 @@ a:hover {
 }
 
 h1 {
-  margin-top: 6.6675rem;
+  margin-top: 0;
   margin-bottom: 0;
-  font-size: 5.3rem;
+  font-size: 6.21vw;
   line-height: 1.15;
   letter-spacing: 0.12rem;
 }
 
-h2 {
+h3 {
   color: #a3a3a3;
   font-weight: normal;
   margin-top: 39px;
@@ -93,11 +113,20 @@ h2 {
   letter-spacing: 0.033rem;
 }
 
+h4 {
+  padding-bottom: 1.00038rem;
+  color: #a3a3a3;
+  font-weight: normal;
+  font-size: 18px;
+  border-bottom: 0.092rem solid #d4d4d4;
+}
+
 header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 39%;
       grid-template-columns: auto 39%;
+  margin-top: 6.6675rem;
 }
 
 header form {
@@ -116,7 +145,7 @@ header input {
   min-width: 249px;
   color: #a3a3a3;
   padding: 1.00038rem;
-  border: 0.112rem solid #d4d4d4;
+  border: 0.092rem solid #d4d4d4;
   border-radius: 10px;
 }
 
@@ -144,11 +173,9 @@ header button {
 }
 
 header img {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 section {
@@ -156,5 +183,6 @@ section {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
+  margin-top: 6.6675rem;
 }
 /*# sourceMappingURL=main.css.map */

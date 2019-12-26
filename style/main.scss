@@ -2,14 +2,15 @@
 @import "./color";
 
 $root_font-size: 18px;
-$font-size_h1: 5.3rem;
-$font-size_h2: 1.15rem;
+$font-size_h1: 6.21vw;
+$font-size_h3: 1.15rem;
 
-$h_margin: 1.334rem;
-$v_big_margin: 2.667rem;
-$v_normal_margin: $v_big_margin / 2;
-$v_small_margin: $v_big_margin / 2.666;
-$border: 0.112rem solid $l_gray;
+$big_margin: 2.667rem;
+$normal_margin: $big_margin / 2;
+$small_margin: $big_margin / 2.666;
+$smaller_margin: $small_margin / 2;
+$border: 0.092rem solid $l_gray;
+$border-radius: 10px;
 
 html {
   font-size: $root_font-size;
@@ -17,16 +18,16 @@ html {
   color: $black;
 }
 body {
-  margin: 0 $v_big_margin;
+  margin: 0 $big_margin;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: -$v_big_margin;
-  margin-right: -$v_big_margin;
-  padding: $h_margin $v_big_margin;
+  margin-left: -$big_margin;
+  margin-right: -$big_margin;
+  padding: $normal_margin $big_margin;
   border-bottom: $border;
   .logo {
     display: flex;
@@ -36,17 +37,28 @@ nav {
       width: 2.667rem;
     }
     span {
-      margin-left: $v_small_margin;
+      margin-left: $small_margin;
     }
   }
   ul {
-    display: inline;
+    display: flex;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
     li {
-      display: inline;
-      margin-left: $v_normal_margin;
+      margin-left: $normal_margin;
+    }
+    .hero {
+      padding: $smaller_margin $small_margin;
+      border: $border;
+      border-radius: $border-radius;
+      display: flex;
+      align-self: center;
+      img {
+        margin-right: $small_margin;
+        width: 1.3rem;
+      }
     }
   }
 }
@@ -60,31 +72,39 @@ a {
 }
 
 h1 {
-  margin-top: $v_big_margin * 3 - $v_normal_margin;
+  margin-top: 0;
   margin-bottom: 0;
   font-size: $font-size_h1;
   line-height: 1.15;
   letter-spacing: 0.12rem;
 }
-h2 {
+h3 {
   color: $gray;
   font-weight: normal;
   margin-top: 39px;
   margin-bottom: 0;
   line-height: 1.7;
-  font-size: $font-size_h2;
+  font-size: $font-size_h3;
   letter-spacing: 0.033rem;
+}
+h4 {
+  padding-bottom: $small_margin;
+  color: $gray;
+  font-weight: normal;
+  font-size: $root_font-size;
+  border-bottom: $border;
 }
 
 header {
   display: grid;
   grid-template-columns: auto 39%;
+  margin-top: $big_margin * 3 - $normal_margin;
   form {
-    margin-top: $v_big_margin * 2.7;
+    margin-top: $big_margin * 2.7;
   }
   input,
   button {
-    font-size: $font-size_h2;
+    font-size: $font-size_h3;
     font-family: "PT Sans";
     letter-spacing: 0.6px;
     line-height: 1;
@@ -92,26 +112,26 @@ header {
   input {
     min-width: 249px;
     color: $gray;
-    padding: $v_small_margin;
+    padding: $small_margin;
     border: $border;
-    border-radius: 10px;
+    border-radius: $border-radius;
     &::placeholder {
       color: $gray;
     }
   }
   button {
-    padding-left: $v_small_margin;
+    padding-left: $small_margin;
     color: $main;
     border: none;
     background-color: unset;
   }
   img {
-    justify-self: end;
-    align-self: end;
+    align-self: center;
   }
 }
 
 section {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-top: $big_margin * 3 - $normal_margin;
 }
