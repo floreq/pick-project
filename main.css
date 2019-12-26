@@ -218,6 +218,10 @@ section {
   row-gap: 2.667rem;
 }
 
+section img {
+  max-height: 33.333rem;
+}
+
 section .l-img {
   -ms-grid-column-align: center;
       justify-self: center;

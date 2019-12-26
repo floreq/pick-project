@@ -162,6 +162,9 @@ section {
   margin-top: $big_margin * 3;
   column-gap: $big_margin;
   row-gap: $big_margin;
+  img {
+    max-height: 33.333rem;
+  }
   .l-img {
     justify-self: center;
     height: 100%;
