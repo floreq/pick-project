@@ -193,9 +193,32 @@ section {
 table {
   border-collapse: collapse;
   line-height: 1;
+  th,
+  td {
+    padding: $small_margin;
+    text-align: right;
+    border-right: $border;
+    &:nth-child(even) {
+      text-align: left;
+      border-right: unset;
+    }
+  }
+  th {
+    color: $main;
+    font-weight: normal;
+  }
   td {
     border-top: $border;
-    border-right: $border;
+    color: $gray;
+    &:nth-child(even) {
+      color: $black;
+    }
+  }
+}
+.short-table {
+  margin-top: $small_margin * 2;
+  th {
+    padding-top: 0;
   }
 }
 

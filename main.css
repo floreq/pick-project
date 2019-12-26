@@ -259,9 +259,39 @@ table {
   line-height: 1;
 }
 
+table th,
+table td {
+  padding: 1.00038rem;
+  text-align: right;
+  border-right: 0.112rem solid #d4d4d4;
+}
+
+table th:nth-child(even),
+table td:nth-child(even) {
+  text-align: left;
+  border-right: unset;
+}
+
+table th {
+  color: #ee6c4d;
+  font-weight: normal;
+}
+
 table td {
   border-top: 0.112rem solid #d4d4d4;
-  border-right: 0.112rem solid #d4d4d4;
+  color: #a3a3a3;
+}
+
+table td:nth-child(even) {
+  color: #293241;
+}
+
+.short-table {
+  margin-top: 2.00075rem;
+}
+
+.short-table th {
+  padding-top: 0;
 }
 
 footer {
