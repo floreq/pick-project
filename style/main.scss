@@ -3,13 +3,14 @@
 
 $root_font-size: 18px;
 $font-size_h1: 6.21vw;
+$font-size_h2: 2.12rem;
 $font-size_h3: 1.15rem;
 
 $big_margin: 2.667rem;
 $normal_margin: $big_margin / 2;
 $small_margin: $big_margin / 2.666;
 $smaller_margin: $small_margin / 2;
-$border: 0.092rem solid $l_gray;
+$border: 0.112rem solid $l_gray;
 $border-radius: 10px;
 
 html {
@@ -71,12 +72,27 @@ a {
   }
 }
 
-h1 {
+p {
+  line-height: 1.9;
+  max-width: 32.1rem;
   margin-top: 0;
+  margin-bottom: $small_margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  margin-top: -$normal_margin;
   margin-bottom: 0;
   font-size: $font-size_h1;
   line-height: 1.15;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.16rem;
+}
+h2 {
+  margin: $big_margin 0;
+  font-size: $font-size_h2;
+  letter-spacing: 0.11rem;
 }
 h3 {
   color: $gray;
@@ -88,17 +104,25 @@ h3 {
   letter-spacing: 0.033rem;
 }
 h4 {
+  margin: 0;
   padding-bottom: $small_margin;
   color: $gray;
   font-weight: normal;
   font-size: $root_font-size;
   border-bottom: $border;
 }
+h5 {
+  margin-top: 0;
+  margin-bottom: $normal_margin;
+  font-weight: bold;
+  font-size: $root_font-size;
+  color: $black;
+}
 
 header {
   display: grid;
   grid-template-columns: auto 39%;
-  margin-top: $big_margin * 3 - $normal_margin;
+  margin-top: $big_margin * 3;
   form {
     margin-top: $big_margin * 2.7;
   }
@@ -126,12 +150,75 @@ header {
     background-color: unset;
   }
   img {
+    justify-self: end;
     align-self: center;
+    height: 100%;
   }
 }
 
 section {
   display: grid;
-  grid-template-columns: 50% 50%;
-  margin-top: $big_margin * 3 - $normal_margin;
+  grid-template-columns: 1fr 1fr;
+  margin-top: $big_margin * 3;
+  column-gap: $big_margin;
+  row-gap: $big_margin;
+  .l-img {
+    justify-self: center;
+    height: 100%;
+  }
+  .r-img {
+    align-self: end;
+    width: 100%;
+  }
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: $big_margin;
+  text-align: center;
+  .circle {
+    margin: 0 auto $normal_margin auto;
+    padding: $normal_margin;
+    border: $border;
+    border-radius: 100%;
+    width: 3.334rem;
+    height: 3.334rem;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  line-height: 1;
+  td {
+    border-top: $border;
+    border-right: $border;
+  }
+}
+
+footer {
+  margin-top: $big_margin * 3;
+  margin-left: -$big_margin;
+  margin-right: -$big_margin;
+  padding: $normal_margin $big_margin;
+  border-top: $border;
+  color: $gray;
+  label {
+    float: right;
+    display: flex;
+    align-content: center;
+    .arrow {
+      width: $root_font-size;
+      margin-right: $smaller_margin;
+    }
+    button {
+      color: $gray;
+      font-size: $root_font-size;
+      border: unset;
+      background-color: unset;
+    }
+  }
 }
