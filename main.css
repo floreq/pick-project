@@ -33,7 +33,7 @@ nav {
   margin-left: -2.667rem;
   margin-right: -2.667rem;
   padding: 1.3335rem 2.667rem;
-  border-bottom: 0.112rem solid #d4d4d4;
+  border-bottom: 0.14rem solid #d4d4d4;
 }
 
 nav .logo {
@@ -72,7 +72,7 @@ nav ul li {
 
 nav ul .hero {
   padding: 0.50019rem 1.00038rem;
-  border: 0.112rem solid #d4d4d4;
+  border: 0.14rem solid #d4d4d4;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,7 +136,7 @@ h4 {
   color: #a3a3a3;
   font-weight: normal;
   font-size: 18px;
-  border-bottom: 0.112rem solid #d4d4d4;
+  border-bottom: 0.14rem solid #d4d4d4;
 }
 
 h5 {
@@ -171,7 +171,7 @@ header input {
   min-width: 249px;
   color: #a3a3a3;
   padding: 1.00038rem;
-  border: 0.112rem solid #d4d4d4;
+  border: 0.14rem solid #d4d4d4;
   border-radius: 10px;
 }
 
@@ -248,7 +248,7 @@ section .r-img {
 .three-col .circle {
   margin: 0 auto 1.3335rem auto;
   padding: 1.3335rem;
-  border: 0.112rem solid #d4d4d4;
+  border: 0.14rem solid #d4d4d4;
   border-radius: 100%;
   width: 3.334rem;
   height: 3.334rem;
@@ -267,7 +267,7 @@ table th,
 table td {
   padding: 1.00038rem;
   text-align: right;
-  border-right: 0.112rem solid #d4d4d4;
+  border-right: 0.14rem solid #d4d4d4;
 }
 
 table th:nth-child(even),
@@ -282,7 +282,7 @@ table th {
 }
 
 table td {
-  border-top: 0.112rem solid #d4d4d4;
+  border-top: 0.14rem solid #d4d4d4;
   color: #a3a3a3;
 }
 
@@ -303,7 +303,7 @@ footer {
   margin-left: -2.667rem;
   margin-right: -2.667rem;
   padding: 1.3335rem 2.667rem;
-  border-top: 0.112rem solid #d4d4d4;
+  border-top: 0.14rem solid #d4d4d4;
   color: #a3a3a3;
 }
 
