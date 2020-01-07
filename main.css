@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  margin: 0 2.667rem;
+  margin: 0 1.3335rem;
 }
 
 nav {
@@ -30,9 +30,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: -2.667rem;
-  margin-right: -2.667rem;
-  padding: 1.3335rem 2.667rem;
+  margin-left: -1.3335rem;
+  margin-right: -1.3335rem;
+  padding: 1.3335rem 1.3335rem;
   border-bottom: 0.14rem solid #d4d4d4;
 }
 
@@ -109,25 +109,26 @@ p:last-child {
 h1 {
   margin-top: -1.3335rem;
   margin-bottom: 0;
-  font-size: 6.21vw;
+  font-size: 7.9vw;
   line-height: 1.15;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
-  margin: 2.667rem 0;
-  font-size: 2.12rem;
-  letter-spacing: 0.11rem;
+  margin: 1.3335rem 0;
+  font-size: 7.33vw;
+  letter-spacing: 0.06rem;
 }
 
 h3 {
+  max-width: 464px;
   color: #a3a3a3;
   font-weight: normal;
   margin-top: 39px;
   margin-bottom: 0;
   line-height: 1.7;
-  font-size: 1.15rem;
-  letter-spacing: 0.033rem;
+  font-size: 18px;
+  letter-spacing: 0.011rem;
 }
 
 h4 {
@@ -147,28 +148,38 @@ h5 {
   color: #293241;
 }
 
+@media screen and (min-width: 600px) {
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
 header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 39%;
-      grid-template-columns: auto 39%;
-  margin-top: 8.001rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4.0005rem;
 }
 
 header form {
-  margin-top: 7.2009rem;
+  margin-top: 2.667rem;
 }
 
 header input,
 header button {
-  font-size: 1.15rem;
+  font-size: 18px;
   font-family: "PT Sans";
   letter-spacing: 0.6px;
   line-height: 1;
 }
 
 header input {
-  min-width: 249px;
+  max-width: 320px;
+  width: calc(100% - 2.667rem + 6px);
   color: #a3a3a3;
   padding: 1.00038rem;
   border: 0.14rem solid #d4d4d4;
@@ -192,34 +203,30 @@ header input::placeholder {
 }
 
 header button {
-  padding-left: 1.00038rem;
+  margin-left: 1.00038rem;
+  margin-top: 1.00038rem;
+  padding: 0;
   color: #ee6c4d;
   border: none;
   background-color: unset;
 }
 
 header img {
-  -ms-grid-column-align: end;
-      justify-self: end;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 100%;
+  width: 100%;
+  max-width: 538px;
+  margin-top: 2.667rem;
 }
 
 section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  margin-top: 8.001rem;
-  -webkit-column-gap: 2.667rem;
-          column-gap: 2.667rem;
-  row-gap: 2.667rem;
+  margin-top: 2.667rem;
 }
 
 section img {
   max-height: 33.333rem;
+  margin-top: 2.667rem;
 }
 
 section .l-img {
@@ -236,17 +243,11 @@ section .r-img {
 }
 
 .three-col {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -webkit-column-gap: 2.667rem;
-          column-gap: 2.667rem;
   text-align: center;
 }
 
 .three-col .circle {
-  margin: 0 auto 1.3335rem auto;
+  margin: 2.667rem auto 1.3335rem auto;
   padding: 1.3335rem;
   border: 0.14rem solid #d4d4d4;
   border-radius: 100%;
@@ -256,6 +257,27 @@ section .r-img {
 
 .three-col img {
   margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .three-col .circle-wrapper {
+    text-align: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 1.3335rem;
+            column-gap: 1.3335rem;
+    margin-top: 2.667rem;
+  }
+  .three-col .circle-wrapper .circle {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0;
+  }
 }
 
 table {
