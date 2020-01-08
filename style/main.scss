@@ -157,6 +157,7 @@ h5 {
   h3 {
     font-size: $font-size_h3_media_small;
   }
+  h4,
   h5 {
     font-size: $root_font-size_media_small;
   }
@@ -165,6 +166,9 @@ h5 {
   h1 {
     letter-spacing: 0.16rem;
     font-size: $font-size_h1_media_normal;
+  }
+  h2 {
+    letter-spacing: 0.11rem;
   }
 }
 

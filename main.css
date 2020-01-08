@@ -184,6 +184,7 @@ h5 {
   h3 {
     font-size: 1.15rem;
   }
+  h4,
   h5 {
     font-size: 18px;
   }
@@ -193,6 +194,9 @@ h5 {
   h1 {
     letter-spacing: 0.16rem;
     font-size: 6.21vw;
+  }
+  h2 {
+    letter-spacing: 0.11rem;
   }
 }
 
