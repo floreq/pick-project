@@ -148,7 +148,10 @@ h5 {
   color: #293241;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 520px) {
+  h2 {
+    font-size: 2.12rem;
+  }
   h3 {
     font-size: 1.15rem;
   }
@@ -259,7 +262,7 @@ section .r-img {
   margin: auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 520px) {
   .three-col .circle-wrapper {
     text-align: left;
     display: -ms-grid;
@@ -281,6 +284,9 @@ section .r-img {
 }
 
 table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.667rem;
   border-collapse: collapse;
   line-height: 1;
 }
@@ -321,10 +327,10 @@ table td:nth-child(even) {
 }
 
 footer {
-  margin-top: 8.001rem;
-  margin-left: -2.667rem;
-  margin-right: -2.667rem;
-  padding: 1.3335rem 2.667rem;
+  margin-top: 2.667rem;
+  margin-left: -1.3335rem;
+  margin-right: -1.3335rem;
+  padding: 1.3335rem 1.3335rem;
   border-top: 0.14rem solid #d4d4d4;
   color: #a3a3a3;
 }

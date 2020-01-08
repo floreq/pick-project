@@ -13,6 +13,8 @@ $smaller_margin: $small_margin / 2;
 $border: 0.14rem solid $l_gray;
 $border-radius: 10px;
 
+$media_min-width: 520px;
+
 html {
   font-size: $root_font-size;
   font-family: "PT Sans";
@@ -120,8 +122,13 @@ h5 {
   color: $black;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $media_min-width) {
+  $font-size_h2: 2.12rem;
   $font-size_h3: 1.15rem;
+
+  h2 {
+    font-size: $font-size_h2;
+  }
   h3 {
     font-size: $font-size_h3;
   }
@@ -197,7 +204,7 @@ section {
   img {
     margin: auto;
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $media_min-width) {
     .circle-wrapper {
       text-align: left;
       display: grid;
@@ -214,6 +221,9 @@ section {
 }
 
 table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $normal_margin * 2;
   border-collapse: collapse;
   line-height: 1;
   th,
@@ -246,10 +256,10 @@ table {
 }
 
 footer {
-  margin-top: $big_margin * 3;
-  margin-left: -$big_margin;
-  margin-right: -$big_margin;
-  padding: $normal_margin $big_margin;
+  margin-top: $normal_margin * 2;
+  margin-left: -$normal_margin;
+  margin-right: -$normal_margin;
+  padding: $normal_margin $normal_margin;
   border-top: $border;
   color: $gray;
   label {
