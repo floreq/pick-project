@@ -11,13 +11,25 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "PT Sans";
   color: #293241;
 }
 
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   margin: 0 1.3335rem;
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    margin: 0 2.667rem;
+  }
 }
 
 nav {
@@ -86,6 +98,14 @@ nav ul .hero img {
   width: 1.3rem;
 }
 
+@media screen and (min-width: 520px) {
+  nav {
+    margin-left: -2.667rem;
+    margin-right: -2.667rem;
+    padding: 1.3335rem 2.667rem;
+  }
+}
+
 a {
   color: #293241;
   text-decoration: none;
@@ -127,7 +147,7 @@ h3 {
   margin-top: 39px;
   margin-bottom: 0;
   line-height: 1.7;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.011rem;
 }
 
@@ -136,7 +156,7 @@ h4 {
   padding-bottom: 1.00038rem;
   color: #a3a3a3;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 0.14rem solid #d4d4d4;
 }
 
@@ -144,7 +164,7 @@ h5 {
   margin-top: 0;
   margin-bottom: 1.3335rem;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: #293241;
 }
 
@@ -154,6 +174,12 @@ h5 {
   }
   h3 {
     font-size: 1.15rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    font-size: 6.21vw;
   }
 }
 
@@ -174,7 +200,7 @@ header form {
 
 header input,
 header button {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "PT Sans";
   letter-spacing: 0.6px;
   line-height: 1;
@@ -223,6 +249,24 @@ header img {
   margin-top: 2.667rem;
 }
 
+@media screen and (min-width: 1100px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 39%;
+        grid-template-columns: auto 39%;
+    margin-top: 8.001rem;
+  }
+  header form {
+    margin-top: 7.2009rem;
+  }
+  header img {
+    height: 100%;
+    max-width: unset;
+    margin-top: 0;
+  }
+}
+
 section {
   margin-top: 2.667rem;
 }
@@ -243,6 +287,15 @@ section .r-img {
       -ms-grid-row-align: end;
       align-self: end;
   width: 100%;
+}
+
+section .chart-wrapper {
+  text-align: center;
+  margin-top: 1.3335rem;
+}
+
+section .chart-wrapper img {
+  margin: 0;
 }
 
 .three-col {
@@ -345,13 +398,13 @@ footer label {
 }
 
 footer label .arrow {
-  width: 18px;
+  width: 16px;
   margin-right: 0.50019rem;
 }
 
 footer label button {
   color: #a3a3a3;
-  font-size: 18px;
+  font-size: 16px;
   border: unset;
   background-color: unset;
 }

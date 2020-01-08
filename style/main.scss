@@ -1,7 +1,7 @@
 @import "./fonts";
 @import "./color";
 
-$root_font-size: 18px;
+$root_font-size: 16px;
 $font-size_h1: 7.9vw;
 $font-size_h2: 7.33vw;
 $font-size_h3: $root_font-size;
@@ -13,15 +13,23 @@ $smaller_margin: $small_margin / 2;
 $border: 0.14rem solid $l_gray;
 $border-radius: 10px;
 
-$media_min-width: 520px;
+$media_min-width_small: 520px;
+$media_min-width_normal: 1100px;
 
 html {
   font-size: $root_font-size;
   font-family: "PT Sans";
   color: $black;
+  @media screen and (min-width: $media_min-width_small) {
+    $root_font-size: 18px;
+    font-size: $root_font-size;
+  }
 }
 body {
   margin: 0 $normal_margin;
+  @media screen and (min-width: $media_min-width_small) {
+    margin: 0 $big_margin;
+  }
 }
 
 nav {
@@ -62,6 +70,13 @@ nav {
         margin-right: $small_margin;
         width: 1.3rem;
       }
+    }
+  }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      margin-left: -$big_margin;
+      margin-right: -$big_margin;
+      padding: $normal_margin $big_margin;
     }
   }
 }
@@ -122,7 +137,7 @@ h5 {
   color: $black;
 }
 
-@media screen and (min-width: $media_min-width) {
+@media screen and (min-width: $media_min-width_small) {
   $font-size_h2: 2.12rem;
   $font-size_h3: 1.15rem;
 
@@ -131,6 +146,13 @@ h5 {
   }
   h3 {
     font-size: $font-size_h3;
+  }
+}
+@media screen and (min-width: $media_min-width_normal) {
+  $font-size_h1: 6.21vw;
+
+  h1 {
+    font-size: $font-size_h1;
   }
 }
 
@@ -173,6 +195,21 @@ header {
     max-width: 538px;
     margin-top: $normal_margin * 2;
   }
+  @media screen and (min-width: $media_min-width_normal) {
+    & {
+      display: grid;
+      grid-template-columns: auto 39%;
+      margin-top: $big_margin * 3;
+      form {
+        margin-top: $big_margin * 2.7;
+      }
+      img {
+        height: 100%;
+        max-width: unset;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 section {
@@ -189,6 +226,13 @@ section {
     align-self: end;
     width: 100%;
   }
+  .chart-wrapper {
+    text-align: center;
+    margin-top: $normal_margin;
+    img {
+      margin: 0;
+    }
+  }
 }
 
 .three-col {
@@ -204,7 +248,7 @@ section {
   img {
     margin: auto;
   }
-  @media screen and (min-width: $media_min-width) {
+  @media screen and (min-width: $media_min-width_small) {
     .circle-wrapper {
       text-align: left;
       display: grid;
