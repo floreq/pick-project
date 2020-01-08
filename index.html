@@ -29,8 +29,8 @@
           takim się stajesz
         </h1>
         <h3>
-          Zbadaj swoją okolicę i dowiedz się czym oddychasz.<br />
-          Zmiejsz rysyko już teraz z Antium.
+          Zbadaj swoją okolicę i dowiedz się czym oddychasz. Zmiejsz rysyko już
+          teraz z Antium.
         </h3>
         <form action="">
           <input
@@ -43,8 +43,7 @@
       </div>
       <img src="./svg/main-image.svg" alt="main image" />
     </header>
-    <section>
-      <img class="l-img" src="./svg/second-image.svg" alt="second image" />
+    <section class="reverse">
       <div>
         <h4>Opis</h4>
         <h2>Programowalny czujnik Antium</h2>
@@ -60,9 +59,14 @@
         </p>
         <p>Etiam tincidunt magna non tempor. Morbi posuere magna sagittis.</p>
       </div>
+      <img
+        class="l-img reverse"
+        src="./svg/second-image.svg"
+        alt="second image"
+      />
     </section>
     <section class="three-col">
-      <div>
+      <div class="circle-wrapper">
         <div class="circle">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
           ><svg
@@ -102,13 +106,15 @@
             </g>
           </svg>
         </div>
-        <h5>Precyzja</h5>
-        <p>
-          Jednostkowe podejście do wykonywania modułów pozwala osiągnąć
-          wyjątkową precyzję pomiarów.
-        </p>
+        <div>
+          <h5>Precyzja</h5>
+          <p>
+            Jednostkowe podejście do wykonywania modułów pozwala osiągnąć
+            wyjątkową precyzję pomiarów.
+          </p>
+        </div>
       </div>
-      <div>
+      <div class="circle-wrapper">
         <div class="circle">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
           ><svg
@@ -138,13 +144,15 @@
             </g>
           </svg>
         </div>
-        <h5>Czułość</h5>
-        <p>
-          W czujniku Antium bez problemu można ustawic z jaką czułością
-          urządzenie powinno mierzyć.
-        </p>
+        <div>
+          <h5>Czułość</h5>
+          <p>
+            W czujniku Antium bez problemu można ustawic z jaką czułością
+            urządzenie powinno mierzyć.
+          </p>
+        </div>
       </div>
-      <div>
+      <div class="circle-wrapper">
         <div class="circle">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
           ><svg
@@ -176,11 +184,13 @@
             </g>
           </svg>
         </div>
-        <h5>Jakość</h5>
-        <p>
-          Każdy komponent przechodzi testy sprawności. Gwarantujemy wieczystą
-          gwarancję.
-        </p>
+        <div>
+          <h5>Jakość</h5>
+          <p>
+            Każdy komponent przechodzi testy sprawności. Gwarantujemy wieczystą
+            gwarancję.
+          </p>
+        </div>
       </div>
     </section>
     <section>
@@ -199,8 +209,10 @@
           phasellus suscipit nunc sit amet ex venenatis.
         </p>
       </div>
-      <div></div>
-      <div></div>
+      <div class="chart-wrapper">
+        <h5>Pomiar ciśnienia</h5>
+        <img src="./svg/chart1.svg" alt="Wykres" />
+      </div>
       <div>
         <h2>Mechanizm analizy danych</h2>
         <p>
@@ -213,6 +225,10 @@
           tempor. Morbi posuere quis magna in sagittis.
         </p>
         <p>Quisque ullamcorper pharetra massa, sed hendrerit velit.</p>
+      </div>
+      <div class="chart-wrapper reverse" style="grid-row-start: 2;">
+        <h5>Pomiar ciśnienia</h5>
+        <img src="./svg/chart2.svg" alt="Wykres" />
       </div>
     </section>
     <section>
@@ -247,9 +263,21 @@
           <td>czujnik światła</td>
           <td>fusce malesuada</td>
         </tr>
+        <tr>
+          <td>miernik poziomu promieniowania</td>
+          <td>eleifend eu erat porttitor</td>
+        </tr>
+        <tr>
+          <td>barometr</td>
+          <td>fusce malesuada</td>
+        </tr>
+        <tr>
+          <td>termometr</td>
+          <td>eleifend eu erat porttitor</td>
+        </tr>
       </table>
 
-      <table class="short-table">
+      <!-- <table class="short-table">
         <tr>
           <th></th>
         </tr>
@@ -269,8 +297,9 @@
           <td></td>
           <td></td>
         </tr>
-      </table>
+      </table> -->
     </section>
+
     <footer>
       <span>© 2019 Zefir</span>
       <label>

@@ -1,10 +1,14 @@
 @import "./fonts";
 @import "./color";
 
-$root_font-size: 18px;
-$font-size_h1: 6.21vw;
-$font-size_h2: 2.12rem;
-$font-size_h3: 1.15rem;
+$root_font-size: 16px;
+$root_font-size_media_small: 18px;
+$font-size_h1: 7.9vw;
+$font-size_h1_media_normal: 6.21vw;
+$font-size_h2: 7.33vw;
+$font-size_h2_media_small: 2.12rem;
+$font-size_h3_media_small: 1.15rem;
+$font-size_h3: $root_font-size;
 
 $big_margin: 2.667rem;
 $normal_margin: $big_margin / 2;
@@ -13,22 +17,31 @@ $smaller_margin: $small_margin / 2;
 $border: 0.13rem solid $l_gray;
 $border-radius: 10px;
 
+$media_min-width_small: 520px;
+$media_min-width_normal: 1100px;
+
 html {
   font-size: $root_font-size;
   font-family: "PT Sans";
   color: $black;
+  @media screen and (min-width: $media_min-width_small) {
+    font-size: $root_font-size_media_small;
+  }
 }
 body {
-  margin: 0 $big_margin;
+  margin: 0 $normal_margin;
+  @media screen and (min-width: $media_min-width_small) {
+    margin: 0 $big_margin;
+  }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: -$big_margin;
-  margin-right: -$big_margin;
-  padding: $normal_margin $big_margin;
+  margin-left: -$normal_margin;
+  margin-right: -$normal_margin;
+  padding: $normal_margin $normal_margin;
   border-bottom: $border;
   .logo {
     display: flex;
@@ -48,9 +61,11 @@ nav {
     margin: 0;
     padding: 0;
     li {
+      display: none;
       margin-left: $normal_margin;
     }
     .hero {
+      display: unset;
       padding: $smaller_margin $small_margin;
       border: $border;
       border-radius: $border-radius;
@@ -59,6 +74,20 @@ nav {
       img {
         margin-right: $small_margin;
         width: 1.3rem;
+      }
+    }
+  }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      margin-left: -$big_margin;
+      margin-right: -$big_margin;
+      padding: $normal_margin $big_margin;
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    ul {
+      li {
+        display: unset;
       }
     }
   }
@@ -87,21 +116,22 @@ h1 {
   margin-bottom: 0;
   font-size: $font-size_h1;
   line-height: 1.15;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.1rem;
 }
 h2 {
-  margin: ($big_margin - 1) 0;
+  margin: $normal_margin 0;
   font-size: $font-size_h2;
-  letter-spacing: 0.11rem;
+  letter-spacing: 0.06rem;
 }
 h3 {
+  max-width: 464px;
   color: $gray;
   font-weight: normal;
   margin-top: 39px;
   margin-bottom: 0;
   line-height: 1.7;
   font-size: $font-size_h3;
-  letter-spacing: 0.033rem;
+  letter-spacing: 0.011rem;
 }
 h4 {
   margin: 0;
@@ -119,12 +149,35 @@ h5 {
   color: $black;
 }
 
+@media screen and (min-width: $media_min-width_small) {
+  h2 {
+    letter-spacing: 0.033rem;
+    font-size: $font-size_h2_media_small;
+  }
+  h3 {
+    font-size: $font-size_h3_media_small;
+  }
+  h4,
+  h5 {
+    font-size: $root_font-size_media_small;
+  }
+}
+@media screen and (min-width: $media_min-width_normal) {
+  h1 {
+    letter-spacing: 0.16rem;
+    font-size: $font-size_h1_media_normal;
+  }
+  h2 {
+    letter-spacing: 0.11rem;
+  }
+}
+
 header {
-  display: grid;
-  grid-template-columns: auto 39%;
-  margin-top: $big_margin * 3;
+  display: flex;
+  flex-direction: column;
+  margin-top: $normal_margin * 3;
   form {
-    margin-top: $big_margin * 2.7;
+    margin-top: $normal_margin * 2;
   }
   input,
   button {
@@ -134,7 +187,8 @@ header {
     line-height: 1;
   }
   input {
-    min-width: 249px;
+    max-width: 320px;
+    width: calc(100% - #{$normal_margin * 2} + 6px);
     color: $gray;
     padding: $small_margin;
     border: $border;
@@ -144,44 +198,94 @@ header {
     }
   }
   button {
-    padding-left: $small_margin;
+    margin-left: $small_margin;
+    margin-top: $small_margin;
+    padding: 0;
     color: $main;
     border: none;
     background-color: unset;
   }
   img {
-    justify-self: end;
     align-self: center;
-    height: 100%;
+    width: 100%;
+    max-width: 538px;
+    margin-top: $normal_margin * 2;
+  }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      input,
+      button {
+        font-size: $font-size_h3_media_small;
+        font-family: "PT Sans";
+        letter-spacing: 0.6px;
+        line-height: 1;
+      }
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    & {
+      display: grid;
+      grid-template-columns: auto 39%;
+      margin-top: $big_margin * 2;
+      form {
+        margin-top: $big_margin * 2.7;
+      }
+      img {
+        height: 100%;
+        max-width: unset;
+        margin-top: 0;
+      }
+    }
   }
 }
 
 section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: $big_margin * 3;
-  column-gap: $big_margin;
-  row-gap: $big_margin;
+  margin-top: $normal_margin * 2;
   img {
     max-height: 33.333rem;
+    margin-top: $normal_margin * 2;
   }
-  .l-img {
-    justify-self: center;
-    height: 100%;
+  .chart-wrapper {
+    text-align: center;
+    margin-top: $normal_margin;
+    img {
+      margin: 0;
+    }
   }
-  .r-img {
-    align-self: end;
-    width: 100%;
+}
+@media screen and (min-width: $media_min-width_normal) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $big_margin;
+    margin-top: $big_margin * 3;
+    grid-gap: $big_margin;
+    .circle-wrapper {
+      text-align: center;
+      margin-top: 0;
+    }
+    .l-img {
+      justify-self: center;
+      height: 100%;
+    }
+    .r-img {
+      align-self: end;
+      width: 100%;
+    }
+    img {
+      margin-top: 0;
+    }
+    .reverse {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
   }
 }
 
 .three-col {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: $big_margin;
   text-align: center;
   .circle {
-    margin: 0 auto $normal_margin auto;
+    margin: $normal_margin * 2 auto $normal_margin auto;
     padding: $normal_margin;
     border: $border;
     border-radius: 100%;
@@ -191,9 +295,46 @@ section {
   img {
     margin: auto;
   }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      .circle-wrapper {
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        column-gap: $normal_margin;
+        margin-top: $normal_margin * 2;
+        .circle {
+          justify-self: center;
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    & {
+      grid-template-columns: repeat(3, auto);
+      .circle-wrapper {
+        display: block;
+        margin-top: 0;
+        text-align: center;
+        .circle {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: $normal_margin;
+        }
+      }
+    }
+  }
 }
 
 table {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $normal_margin * 2;
   border-collapse: collapse;
   line-height: 1;
   th,
@@ -226,10 +367,10 @@ table {
 }
 
 footer {
-  margin-top: $big_margin * 3;
-  margin-left: -$big_margin;
-  margin-right: -$big_margin;
-  padding: $normal_margin $big_margin;
+  margin-top: $normal_margin * 2;
+  margin-left: -$normal_margin;
+  margin-right: -$normal_margin;
+  padding: $normal_margin $normal_margin;
   border-top: $border;
   color: $gray;
   label {
