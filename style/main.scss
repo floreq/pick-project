@@ -2,8 +2,12 @@
 @import "./color";
 
 $root_font-size: 16px;
+$root_font-size_media_small: 18px;
 $font-size_h1: 7.9vw;
+$font-size_h1_media_normal: 6.21vw;
 $font-size_h2: 7.33vw;
+$font-size_h2_media_small: 2.12rem;
+$font-size_h3_media_small: 1.15rem;
 $font-size_h3: $root_font-size;
 
 $big_margin: 2.667rem;
@@ -21,8 +25,7 @@ html {
   font-family: "PT Sans";
   color: $black;
   @media screen and (min-width: $media_min-width_small) {
-    $root_font-size: 18px;
-    font-size: $root_font-size;
+    font-size: $root_font-size_media_small;
   }
 }
 body {
@@ -58,9 +61,11 @@ nav {
     margin: 0;
     padding: 0;
     li {
+      display: none;
       margin-left: $normal_margin;
     }
     .hero {
+      display: unset;
       padding: $smaller_margin $small_margin;
       border: $border;
       border-radius: $border-radius;
@@ -77,6 +82,13 @@ nav {
       margin-left: -$big_margin;
       margin-right: -$big_margin;
       padding: $normal_margin $big_margin;
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    ul {
+      li {
+        display: unset;
+      }
     }
   }
 }
@@ -138,21 +150,21 @@ h5 {
 }
 
 @media screen and (min-width: $media_min-width_small) {
-  $font-size_h2: 2.12rem;
-  $font-size_h3: 1.15rem;
-
   h2 {
-    font-size: $font-size_h2;
+    letter-spacing: 0.033rem;
+    font-size: $font-size_h2_media_small;
   }
   h3 {
-    font-size: $font-size_h3;
+    font-size: $font-size_h3_media_small;
+  }
+  h5 {
+    font-size: $root_font-size_media_small;
   }
 }
 @media screen and (min-width: $media_min-width_normal) {
-  $font-size_h1: 6.21vw;
-
   h1 {
-    font-size: $font-size_h1;
+    letter-spacing: 0.16rem;
+    font-size: $font-size_h1_media_normal;
   }
 }
 
@@ -195,11 +207,22 @@ header {
     max-width: 538px;
     margin-top: $normal_margin * 2;
   }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      input,
+      button {
+        font-size: $font-size_h3_media_small;
+        font-family: "PT Sans";
+        letter-spacing: 0.6px;
+        line-height: 1;
+      }
+    }
+  }
   @media screen and (min-width: $media_min-width_normal) {
     & {
       display: grid;
       grid-template-columns: auto 39%;
-      margin-top: $big_margin * 3;
+      margin-top: $big_margin * 2;
       form {
         margin-top: $big_margin * 2.7;
       }
@@ -218,19 +241,39 @@ section {
     max-height: 33.333rem;
     margin-top: $normal_margin * 2;
   }
-  .l-img {
-    justify-self: center;
-    height: 100%;
-  }
-  .r-img {
-    align-self: end;
-    width: 100%;
-  }
   .chart-wrapper {
     text-align: center;
     margin-top: $normal_margin;
     img {
       margin: 0;
+    }
+  }
+}
+@media screen and (min-width: $media_min-width_normal) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $big_margin;
+    margin-top: $big_margin * 3;
+    grid-gap: $big_margin;
+    .circle-wrapper {
+      text-align: center;
+      margin-top: 0;
+    }
+    .l-img {
+      justify-self: center;
+      height: 100%;
+    }
+    .r-img {
+      align-self: end;
+      width: 100%;
+    }
+    img {
+      margin-top: 0;
+    }
+    .reverse {
+      grid-column-start: 1;
+      grid-row-start: 1;
     }
   }
 }
@@ -249,22 +292,42 @@ section {
     margin: auto;
   }
   @media screen and (min-width: $media_min-width_small) {
-    .circle-wrapper {
-      text-align: left;
-      display: grid;
-      grid-template-columns: auto auto;
-      align-items: center;
-      column-gap: $normal_margin;
-      margin-top: $normal_margin * 2;
-      .circle {
-        justify-self: center;
-        margin: 0;
+    & {
+      .circle-wrapper {
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        column-gap: $normal_margin;
+        margin-top: $normal_margin * 2;
+        .circle {
+          justify-self: center;
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    & {
+      grid-template-columns: repeat(3, auto);
+      .circle-wrapper {
+        display: block;
+        margin-top: 0;
+        text-align: center;
+        .circle {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: $normal_margin;
+        }
       }
     }
   }
 }
 
 table {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: $normal_margin * 2;
