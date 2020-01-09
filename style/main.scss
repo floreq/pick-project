@@ -5,6 +5,7 @@ $root_font-size: 16px;
 $root_font-size_media_small: 18px;
 $font-size_h1: 7.9vw;
 $font-size_h1_media_normal: 6.21vw;
+$font-size_h1_media_big: 5.798rem;
 $font-size_h2: 7.33vw;
 $font-size_h2_media_small: 2.12rem;
 $font-size_h3_media_small: 1.15rem;
@@ -19,6 +20,7 @@ $border-radius: 10px;
 
 $media_min-width_small: 520px;
 $media_min-width_normal: 1100px;
+$media_min-width_big: 1800px;
 
 html {
   font-size: $root_font-size;
@@ -29,9 +31,11 @@ html {
   }
 }
 body {
-  margin: 0 $normal_margin;
+  margin: 0 auto;
+  padding: 0 $normal_margin;
+  max-width: $media_min-width_big;
   @media screen and (min-width: $media_min-width_small) {
-    margin: 0 $big_margin;
+    padding: 0 $big_margin;
   }
 }
 
@@ -116,7 +120,7 @@ h1 {
   margin-bottom: 0;
   font-size: $font-size_h1;
   line-height: 1.15;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 h2 {
   margin: $normal_margin 0;
@@ -169,6 +173,11 @@ h5 {
   }
   h2 {
     letter-spacing: 0.11rem;
+  }
+}
+@media screen and (min-width: $media_min-width_big) {
+  h1 {
+    font-size: $font-size_h1_media_big;
   }
 }
 
@@ -381,11 +390,15 @@ footer {
       width: $root_font-size;
       margin-right: $smaller_margin;
     }
-    button {
+    a {
       color: $gray;
-      font-size: $root_font-size;
-      border: unset;
-      background-color: unset;
+    }
+  }
+  @media screen and (min-width: $media_min-width_small) {
+    & {
+      margin-left: -$big_margin;
+      margin-right: -$big_margin;
+      padding: $normal_margin $big_margin;
     }
   }
 }
