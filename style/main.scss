@@ -343,7 +343,6 @@ table {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: $normal_margin * 2;
   border-collapse: collapse;
   line-height: 1;
   th,
@@ -369,7 +368,6 @@ table {
   }
 }
 .short-table {
-  margin-top: $small_margin * 2;
   th {
     padding-top: 0;
   }
