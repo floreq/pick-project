@@ -7,16 +7,16 @@
     <title>Czujnik Antium</title>
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body>
+  <body id="top">
     <nav>
       <div class="logo">
         <img src="./svg/logo.svg" alt="logo" />
         <span>Zefir</span>
       </div>
       <ul>
-        <li><a href="">Opis</a></li>
-        <li><a href="">Funkcje</a></li>
-        <li><a href="">Specyfikacja</a></li>
+        <li><a href="#opis">Opis</a></li>
+        <li><a href="#funkcje">Funkcje</a></li>
+        <li><a href="#specyfikacja">Specyfikacja</a></li>
         <li class="hero">
           <img src="./svg/target.svg" alt="target" /><a href="">Zamów</a>
         </li>
@@ -43,7 +43,7 @@
       </div>
       <img src="./svg/main-image.svg" alt="main image" />
     </header>
-    <section class="reverse">
+    <section id="opis" class="reverse">
       <div>
         <h4>Opis</h4>
         <h2>Programowalny czujnik Antium</h2>
@@ -193,7 +193,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="funkcje">
       <div>
         <h4>Funkcje</h4>
         <h2>Co potrafi czujnik Antium?</h2>
@@ -231,7 +231,7 @@
         <img src="./svg/chart2.svg" alt="Wykres" />
       </div>
     </section>
-    <section>
+    <section id="specyfikacja">
       <div>
         <h4>Specyfikacja</h4>
         <h2>I na koniec podsumowanie</h2>
@@ -332,8 +332,9 @@
             </g>
           </svg>
         </div>
-        <button>Powrót na górę</button></label
+        <a href="#top">Powrót na górę</a></label
       >
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
