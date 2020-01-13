@@ -382,7 +382,7 @@ footer {
   padding: $normal_margin $normal_margin;
   border-top: $border;
   color: $gray;
-  label {
+  .arrow-wrapper {
     float: right;
     display: flex;
     align-content: center;
