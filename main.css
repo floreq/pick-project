@@ -243,18 +243,22 @@ header input {
 }
 
 header input::-webkit-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input:-ms-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input::-ms-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input::placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
@@ -421,7 +425,6 @@ table {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2.667rem;
   border-collapse: collapse;
   line-height: 1;
 }
@@ -451,10 +454,6 @@ table td {
 
 table td:nth-child(even) {
   color: #293241;
-}
-
-.short-table {
-  margin-top: 2.00075rem;
 }
 
 .short-table th {
