@@ -469,7 +469,7 @@ footer {
   color: #a3a3a3;
 }
 
-footer label {
+footer .arrow-wrapper {
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,12 +478,12 @@ footer label {
       align-content: center;
 }
 
-footer label .arrow {
+footer .arrow-wrapper .arrow {
   width: 16px;
   margin-right: 0.50019rem;
 }
 
-footer label a {
+footer .arrow-wrapper a {
   color: #a3a3a3;
 }
 
