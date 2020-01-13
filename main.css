@@ -243,18 +243,22 @@ header input {
 }
 
 header input::-webkit-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input:-ms-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input::-ms-input-placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 
 header input::placeholder {
+  opacity: 1;
   color: #a3a3a3;
 }
 

@@ -1,6 +1,7 @@
 @import "./fonts";
 @import "./color";
 
+$font-family: "PT Sans";
 $root_font-size: 16px;
 $root_font-size_media_small: 18px;
 $font-size_h1: 7.9vw;
@@ -24,7 +25,7 @@ $media_min-width_big: 1800px;
 
 html {
   font-size: $root_font-size;
-  font-family: "PT Sans";
+  font-family: $font-family;
   color: $black;
   @media screen and (min-width: $media_min-width_small) {
     font-size: $root_font-size_media_small;
@@ -191,7 +192,7 @@ header {
   input,
   button {
     font-size: $font-size_h3;
-    font-family: "PT Sans";
+    font-family: $font-family;
     letter-spacing: 0.6px;
     line-height: 1;
   }
@@ -203,6 +204,7 @@ header {
     border: $border;
     border-radius: $border-radius;
     &::placeholder {
+      opacity: 1;
       color: $gray;
     }
   }
@@ -225,7 +227,7 @@ header {
       input,
       button {
         font-size: $font-size_h3_media_small;
-        font-family: "PT Sans";
+        font-family: $font-family;
         letter-spacing: 0.6px;
         line-height: 1;
       }
