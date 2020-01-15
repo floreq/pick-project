@@ -261,6 +261,8 @@ section {
   .chart-wrapper {
     text-align: center;
     margin-top: $normal_margin;
+    width: 100%;
+    position: relative;
     img {
       margin: 0;
     }
@@ -281,6 +283,9 @@ section {
     column-gap: $big_margin;
     margin-top: $big_margin * 3;
     grid-gap: $big_margin;
+    .chart-wrapper {
+      max-width: calc(50vw - #{$big_margin * 2});
+    }
     .paragraph-column {
       column-count: 1;
       column-gap: unset;

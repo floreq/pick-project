@@ -320,6 +320,8 @@ section img {
 section .chart-wrapper {
   text-align: center;
   margin-top: 1.3335rem;
+  width: 100%;
+  position: relative;
 }
 
 section .chart-wrapper img {
@@ -345,6 +347,9 @@ section .chart-wrapper img {
             column-gap: 2.667rem;
     margin-top: 8.001rem;
     grid-gap: 2.667rem;
+  }
+  section .chart-wrapper {
+    max-width: calc(50vw - 5.334rem);
   }
   section .paragraph-column {
     -webkit-column-count: 1;
