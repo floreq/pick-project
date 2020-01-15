@@ -357,6 +357,7 @@ table {
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100%;
+  margin-top: $normal_margin * 2;
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
@@ -380,6 +381,11 @@ table {
     color: $gray;
     &:nth-child(even) {
       color: $black;
+    }
+  }
+  @media screen and (min-width: $media_min-width_normal) {
+    & {
+      margin-top: 0;
     }
   }
 }
