@@ -20,6 +20,7 @@ $border: 0.13rem solid $l_gray;
 $border-radius: 10px;
 
 $media_min-width_small: 520px;
+$media_min-width_medium: 32.1rem;
 $media_min-width_normal: 1100px;
 $media_min-width_big: 1800px;
 
@@ -106,9 +107,10 @@ a {
   }
 }
 
+$p-max-width: 32.1rem;
 p {
   line-height: 1.9;
-  max-width: 32.1rem;
+  max-width: $p-max-width;
   margin-top: 0;
   margin-bottom: $small_margin;
   &:last-child {
@@ -264,6 +266,14 @@ section {
     }
   }
 }
+@media screen and (min-width: #{$p-max-width * 1.6}) {
+  section {
+    .paragraph-column {
+      column-count: 2;
+      column-gap: $big_margin;
+    }
+  }
+}
 @media screen and (min-width: $media_min-width_normal) {
   section {
     display: grid;
@@ -271,6 +281,10 @@ section {
     column-gap: $big_margin;
     margin-top: $big_margin * 3;
     grid-gap: $big_margin;
+    .paragraph-column {
+      column-count: 1;
+      column-gap: unset;
+    }
     .circle-wrapper {
       text-align: center;
       margin-top: 0;
