@@ -18,7 +18,7 @@ const colors = {
   lGray: "#d4d4d4",
   gray: "#a3a3a3"
 };
-let font = {
+const font = {
   fontFamily: "PT Sans",
   fontSize: 18,
   padding: 24
@@ -91,7 +91,7 @@ const lineChart = new Chart(ctx, {
         backgroundColor: "rgba(0, 0, 0, 0)",
         borderColor: colors.main,
         borderWidth: border.borderWidth,
-        data: [2, 1, 3, 1, 2, 5, 4]
+        data: [2, 1, 3, 1, 2, 4.5, 4]
       }
     ]
   },
