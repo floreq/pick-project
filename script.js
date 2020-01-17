@@ -18,7 +18,7 @@ const colors = {
   lGray: "#d4d4d4",
   gray: "#a3a3a3"
 };
-let font = {
+const font = {
   fontFamily: "PT Sans",
   fontSize: 18,
   padding: 24
